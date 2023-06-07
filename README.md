@@ -1,1 +1,1 @@
-Creat repository (My project) on my gitHub account
+Creat repository (project) on my gitHub account

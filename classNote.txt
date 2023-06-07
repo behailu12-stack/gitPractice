@@ -1,0 +1,206 @@
+The main Bash commands you have to know
+
+Directory (folder) related commands:-
+
+pwd - print working directory
+cd - change directory (open the folder)
+ls - list
+ls -al - list all (default permissions)
+mkdir - make directory (create folder)
+touch - create file
+echo - write text
+mv - move or rename a directory (folder)
+rm - remove files 
+rmdir - remove empty folder
+rm -rf - remove folder and anything inside it
+grep - search a string in a file
+clear - clears your screen
+exit - exit terminal
+
+* chmod (change mode):- change permissions of a file or a folder
+
+Example without using the numbers:- 
+
+chmod u-rwx Folder/FileName
+chmod u+rwx Folder/FileName
+
+use minus (-) sign to take away permission use plus (+) sign to give permission
+
+u:- user (me)
+g:- group
+o:- others
+
+The lines below is the script.sh file to be executed through the terminal:-
+
+pwd 
+echo "Hello, I'm about to use script to create folder and files."
+mkdir evangadi-students
+cd evangadi-students
+touch test-1.txt test-2.txt index.html style.css
+echo "Hi, just wrote this using script from script.sh file" > test-1. txt
+echo "Thanks, I'm Done!"
+
+Execute this script.sh (./script.sh ) … but we can't execute in default so we should change the chmod we can check the default permissions by ls -al (-rw-r--r-- (read and write only))
+
+Please run this to give a permission for myself to execute the script.sh file (user can execute)
+
+Chmod u+x script.sh
+
+Check again by ls -al (double/three click on up arrow to get this command)
+
+Now you can easly execute 
+
+./script.sh 
+
+Introduction: What is Git?
+
+It's open source version control system
+
+Tracks the changes made to your source code history
+
+How to access Git:- Terminal or GitHub desktop app 
+
+Advantages of Git:- 
+
+Tracks changes on our code base
+
+Makes it easier for collaboration between developers
+
+Allows developers to save/commit their work and go back to their saved check-point/commit
+
+Example:- Versions of our 
+
+Apple projectV-1 
+Apple (html & Css)V-2 
+Apple (Bootstrap)V-3 
+Apple (jQuery)-4
+
+Why Git and GitHub? How to create a repository on GitHub?
+
+What is GitHub:- 
+
+GitHub is a cloud-based hosting platform for your code and collaborate with others.
+
+It lets you and others work together on projects from anywhere.
+
+Official Website:- https://github.com/
+
+GitHub Desktop:- It's an application that helps you work with GitHub locally:- 
+https://desktop.github.com/
+
+Creat repository (repo (Project)):- by clicking on the plus sign at top-right corner (space is not allowed)
+
+We can make it private and send invitations for collaboration 
+
+Way-1:- use desktop app to include (clone) on local computer 
+
+Way-2:- git clone (paste the link here from the GitHub)
+
+ls the folder we want to do the project and cd (the name of repository):- name (main)
+
+When we run ls -al we get empty folder with .git (…tracking)
+
+Git:- version control system
+GitHub:- The cloud system to store the Git 
+GitHub desktop:- Helps to work with GitHub locally (To download the repo locally)
+
+We can change the privacy settings at any time through visibility setting 
+
+Git workflow:- cloning, editing, committing, pushing (CECP)
+
+Git config for terminal use:- one time and forever for this particular account
+git config --global user.name "John Doe"git config --global user.email "johndoe@example. com"
+
+Video (Git config for terminal use):- https://www.youtube.com/watchv=ZeWx0XNUZWE
+
+Git workflow
+It's a guideline how to use git in a team projects
+
+Git repository (repo):- 
+Project folder created by the project owner on Github.com (Not your project created earlier locally on your computer)
+
+clone:- 
+Creates local copy of the repo
+git clone <URL of repo>
+
+When we creat a file we will see (U) untracked beside the file so we can check this file by running:- git status
+
+To make it trackable use:- git add .
+
+”Dot”:- means track every thing with git repo then check the status again (git status) so the change has been tracked and ready for commit (save)
+
+commit:- commit -m“initial commit” then check the status a gain and we should send it to the GitHub to be saved with git push (It saved the change only locally)
+
+Don't forget the last steps:- 
+
+Git clone <a>
+git add . 
+commit -m“initial commit”
+git push
+
+When we check it on GitHub we can see the created file with the message as a title
+
+When we edit further again we will see the “M” (modified) again:- only we need commit -m“second commit” and push it
+
+When we creat new folder with file we will see “U” (untracked) this one should be git add . and commit -m“new file is created” and push it 
+
+Please don't forget to check the git status for every steps.
+
+In a shorter way from the main repo:- 
+
+git add . 
+git commit -m”add css file and editing the index.html file”
+
+git push (don't forget this last step)
+
+To check every modification from the terminal:- git log —oneline 
+
+git checkout idNo:- To track each steps back and forth
+
+(eg. initial commit:- idNo):- we will directly go back through the initial file we have started earlier 
+
+git checkout main (main branch):- we will go back to the latest version 
+
+What about for a repo created by others:- 
+
+Open the repo that we want to use (contribute) from the creator's GitHub account and click on fork (right-top):- It will be added to my GitHub account as a repo 
+With a label of fork from Evangadi or Biruk
+
+Finally open my folder in integrated terminal and git clone <copy the link here>
+
+After editing something the “M” is labeled 
+
+Then open the folder:- cd Abebe (.git) 
+It's already tracked (False)
+
+Check the status 
+
+git add .
+Commit -m”add name and paragraph”
+
+Check the status:- this project is a head of the main branch (Abebe from Evangadi)
+
+The final step:- 
+Git push 
+
+To contribute this change for the repo creator we should send pull requests from my repo account:- creat pull request to base repo (Evangadi) we can add optional message before the request 
+
+It will be checked the conflict with other contributors 
+
+Git workflow: forking, sending pull request, merging
+
+Git workflow
+
+fork:- Creates a copy of a repo from someone elses repo to your Github account.
+
+pull request:- lets you ask someone else to update their repo after you made some changes to it.
+
+This is how you ask to contribute to someone elses code or repo.
+
+merge else:- After receiving a pull request, the repo owner decides and integrates the new changes made by someone
+
+
+
+
+
+
